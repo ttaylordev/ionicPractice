@@ -1,0 +1,21 @@
+<ion-pane>
+  <ion-header-bar class="bar-stable">
+    <h1 class="title">Chat App</h1>
+  </ion-header-bar>
+  <ion-content>
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-email placeholder-icon"></i>
+        <input ng-model="message" type="text" placeholder="Enter Message">
+      </label>
+    </div>
+    <button ng-click="sendMessage(message)" class="button button-block button-balanced" type="button" name="button">
+      Submit Message</button>
+      <ul>
+        <li class="item" ng-repeat="message in messages">
+          {{message.message}}
+        </li>
+      </ul>
+  </ion-content>
+</ion-pane>
